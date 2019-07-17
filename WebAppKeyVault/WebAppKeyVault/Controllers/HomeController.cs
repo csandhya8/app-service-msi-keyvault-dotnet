@@ -16,7 +16,7 @@ namespace WebAppKeyVault.Controllers
                 var keyVaultClient = new KeyVaultClient(
                     new KeyVaultClient.AuthenticationCallback(azureServiceTokenProvider.KeyVaultTokenCallback));
 
-                var secret = await keyVaultClient.GetSecretAsync("https://appmsi5kv.vault.azure.net/secrets/secret")
+                var secret = await keyVaultClient.GetSecretAsync("https://keyvault-dotnet.vault.azure.net/secrets/TheSecret")
                     .ConfigureAwait(false);
 
                 ViewBag.Secret = $"Secret: {secret.Value}";
