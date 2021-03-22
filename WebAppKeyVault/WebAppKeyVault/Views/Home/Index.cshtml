@@ -1,13 +1,4 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
 
-<div>
-    
-    <div>@ViewBag.Secret</div>
-
-    <div>@ViewBag.Principal</div>
-
-    <div>@ViewBag.Error</div>
-
-</div>
+Configuration value for 'MyKey': @Configuration["MyKey"]
